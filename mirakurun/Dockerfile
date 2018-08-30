@@ -1,5 +1,5 @@
 FROM node:8.9-alpine
-LABEL maintainer "h-mineta <h-mineta@0nyx.net>"
+LABEL maintainer "yanbe <y.yanbe@gmail.com>"
 
 ENV DOCKER="YES"
 
@@ -40,15 +40,21 @@ RUN set -x \
 	&& npm install mirakurun@latest -g --unsafe --production \
 	\
 	# recpt1
-	&& git clone https://github.com/stz2012/recpt1 /tmp/recpt1 \
+	&& git clone https://github.com/project-pp/px_drv /tmp/recpt1 \
 	&& cd /tmp/recpt1/recpt1 \
-	&& ./autogen.sh \
+	&& bash ./autogen.sh \
 	&& ./configure \
 	&& sed -i '/#include <sys\/msg.h>/d' recpt1core.h \
 	&& sed -i -E 's!(#include <sys/msg.h>)!#undef _GNU_SOURCE\n#undef _BSD_SOURCE\n\1!' recpt1.c \
 	&& sed -i -E 's!(#include <sys/msg.h>)!#undef _GNU_SOURCE\n#undef _BSD_SOURCE\n\1!' recpt1ctl.c \
 	&& sed -i -E 's!(#include <sys/msg.h>)!#undef _GNU_SOURCE\n#undef _BSD_SOURCE\n\1!' checksignal.c \
 	&& sed -i -E 's!(#include <ctype.h>)!\1\n#include <event.h>!' tssplitter_lite.c \
+	&& curl -O http://hg.honeyplanet.jp/pt1/raw-file/tip/recpt1/pt1_dev.h \
+	&& sed -i -E 's!("/dev/pt1video12")!\1,\n"/dev/asv52201",\n"/dev/asv52200"!' pt1_dev.h \
+	&& sed -i -E 's!("/dev/pt1video15")!\1,\n"/dev/asv52202",\n"/dev/asv52203"!' pt1_dev.h \
+	&& sed -i -E 's!(#define NUM_BSDEV          ) 36!\1 10!' recpt1.h \
+	&& sed -i -E 's!(#define NUM_ISDB_T_DEV     ) 36!\1 10!' recpt1.h \
+	&& sed -i 's#    #	#' Makefile \
 	&& sed -i 's#-I../driver#-I../driver -I/usr/local/include#' Makefile \
 	&& make \
 	&& make install \
@@ -75,7 +81,7 @@ RUN set -x \
 	#&& ln -sf /dev/stdout /usr/local/var/log/mirakurun.stdout-0.log \
 	#&& ln -sf /dev/stderr /usr/local/var/log/mirakurun.stderr-0.log
 
-COPY services.sh /usr/local/bin
+COPY services.sh /usr/local/bin/
 
 WORKDIR /usr/local/lib/node_modules/mirakurun
 CMD ["/usr/local/bin/services.sh"]

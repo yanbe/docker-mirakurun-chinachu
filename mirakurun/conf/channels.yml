@@ -1,34 +1,26 @@
-- name: THK
-  type: GR
-  channel: '21'
-
 - name: NHK E
   type: GR
   channel: '13'
 
 - name: NHK G
   type: GR
-  channel: '20'
+  channel: '17'
 
-- name: CTV
+- name: TBC
   type: GR
   channel: '19'
 
-- name: CBC
+- name: OX
   type: GR
-  channel: '18'
+  channel: '21'
 
-- name: NBN
+- name: MMT
   type: GR
-  channel: '22'
+  channel: '24'
 
-- name: TVA
+- name: KHB
   type: GR
-  channel: '23'
-
-- name: MTV
-  type: GR
-  channel: '27'
+  channel: '28'
 
 - name: BS Asahi
   type: BS
@@ -42,16 +34,28 @@
   serviceId: 161
   isDisabled: false
 
+- name: BS Japan
+  type: BS
+  channel: 'BS1_2'
+  serviceId: 171
+  isDisabled: false
+
 - name: WOWOW Prime
   type: BS
   channel: 'BS3_0'
   serviceId: 191
   isDisabled: false
 
-- name: BS Japan
+- name: NHKBS Premium
   type: BS
   channel: 'BS3_1'
-  serviceId: 171
+  serviceId: 103
+  isDisabled: false
+
+- name: Disney
+  type: BS
+  channel: 'BS3_2'
+  serviceId: 256
   isDisabled: false
 
 - name: WOWOW Live
@@ -64,30 +68,6 @@
   type: BS
   channel: 'BS5_1'
   serviceId: 193
-  isDisabled: false
-
-- name: Star channel 2,3
-  type: BS
-  channel: 'BS7_0'
-  serviceId: 201
-  isDisabled: false
-
-- name: Star channel 2,3
-  type: BS
-  channel: 'BS7_0'
-  serviceId: 202
-  isDisabled: false
-
-- name: Animax
-  type: BS
-  channel: 'BS7_1'
-  serviceId: 236
-  isDisabled: false
-
-- name: Disney
-  type: BS
-  channel: 'BS7_2'
-  serviceId: 256
   isDisabled: false
 
 - name: BS11
@@ -132,16 +112,28 @@
   serviceId: 181
   isDisabled: false
 
+- name: Animax
+  type: BS
+  channel: 'BS13_2'
+  serviceId: 236
+  isDisabled: false
+
 - name: NHKBS1
   type: BS
   channel: 'BS15_0'
   serviceId: 101
   isDisabled: false
 
-- name: NHKBS Premium
+- name: Star channel 2
   type: BS
   channel: 'BS15_1'
-  serviceId: 103
+  serviceId: 201
+  isDisabled: false
+
+- name: Star channel 3
+  type: BS
+  channel: 'BS15_2'
+  serviceId: 202
   isDisabled: false
 
 - name: Green channel

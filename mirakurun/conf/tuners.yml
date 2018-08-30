@@ -1,30 +1,30 @@
-- name: PT3-S0
+- name: PXW3PE-S0
   types:
     - BS
     - CS
-  command: recpt1 --device /dev/pt3video0 <channel> - -
+  command: recpt1 --device /dev/asv52200 <channel> - -
   decoder: arib-b25-stream-test
   isDisabled: false
 
-- name: PT3-S1
+- name: PXW3PE-S1
   types:
     - BS
     - CS
-  command: recpt1 --device /dev/pt3video1 <channel> - -
+  command: recpt1 --device /dev/asv52201 <channel> - -
   decoder: arib-b25-stream-test
   isDisabled: false
 
-- name: PT3-T0
+- name: PXW3PE-T0
   types:
     - GR
-  command: recpt1 --device /dev/pt3video2 <channel> - -
+  command: recpt1 --device /dev/asv52202 <channel> - -
   decoder: arib-b25-stream-test
   isDisabled: false
 
-- name: PT3-T1
+- name: PXW3PE-T1
   types:
     - GR
-  command: recpt1 --device /dev/pt3video3 <channel> - -
+  command: recpt1 --device /dev/asv52203 <channel> - -
   decoder: arib-b25-stream-test
   isDisabled: false
 

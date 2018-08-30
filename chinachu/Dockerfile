@@ -1,14 +1,14 @@
 FROM node:8.9-alpine
-LABEL maintainer "h-mineta <h-mineta@0nyx.net>"
+LABEL maintainer "yanbe <y.yanbe@gmail.com>"
 
 ENV DOCKER="YES"
-ARG REPOSITORY="git://github.com/Chinachu/Chinachu.git"
-ARG BRANCH="master"
+ENV REPOSITORY=git://github.com/Chinachu/Chinachu.git
+ENV BRANCH=gamma
 
-ARG WORK_DIR="/usr/local/chinachu"
+ENV WORK_DIR="/usr/local/chinachu"
 
 #node container default value
-ARG USER_NAME="node" 
+ENV USER_NAME="node" 
 
 RUN set -x \
 	&& apk upgrade --update \
@@ -63,8 +63,8 @@ RUN set -x \
 	#&& ln -sf /dev/stdout ${WORK_DIR}/log/scheduler \
 	#&& ln -sf /dev/stdout ${WORK_DIR}/log/wui
 
-COPY services.sh /usr/local/bin
-COPY config.sample.json ${WORK_DIR}
+COPY services.sh /usr/local/bin/
+COPY config.sample.json ${WORK_DIR}/
 
 WORKDIR ${WORK_DIR}
 CMD ["/usr/local/bin/services.sh"]
