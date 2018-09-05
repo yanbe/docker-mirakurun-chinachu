@@ -88,7 +88,7 @@
   serviceId: 222
   isDisabled: false
 
-- name: FOX
+- name: FOX bs238
   type: BS
   channel: 'BS11_0'
   serviceId: 238
@@ -98,6 +98,30 @@
   type: BS
   channel: 'BS11_1'
   serviceId: 241
+  isDisabled: false
+
+- name: Housou Daigaku TV 1
+  type: BS
+  channel: 'BS11_2'
+  serviceId: 231
+  isDisabled: false
+
+- name: Housou Daigaku TV 2
+  type: BS
+  channel: 'BS11_2'
+  serviceId: 232
+  isDisabled: false
+
+- name: Housou Daigaku TV 3
+  type: BS
+  channel: 'BS11_2'
+  serviceId: 233
+  isDisabled: false
+
+- name: Housou Daigaku Radio
+  type: BS
+  channel: 'BS11_2'
+  serviceId: 531
   isDisabled: false
 
 - name: BS NIPPON
@@ -112,7 +136,7 @@
   serviceId: 181
   isDisabled: false
 
-- name: Animax
+- name: BS Animax
   type: BS
   channel: 'BS13_2'
   serviceId: 236
@@ -122,6 +146,12 @@
   type: BS
   channel: 'BS15_0'
   serviceId: 101
+  isDisabled: false
+
+- name: NHKBS1 (sub)
+  type: BS
+  channel: 'BS15_0'
+  serviceId: 102
   isDisabled: false
 
 - name: Star channel 2
@@ -190,116 +220,50 @@
   serviceId: 258
   isDisabled: false
 
-- name: ND6
+- name: ND2
   type: CS
-  channel: CS6
-  serviceId: 294
-  isDisabled: false
+  channel: CS2
+
+- name: ND4
+  type: CS
+  channel: CS4
 
 - name: ND6
   type: CS
   channel: CS6
-  serviceId: 323
-  isDisabled: false
 
-- name: ND6
+- name: ND8
   type: CS
-  channel: CS6
-  serviceId: 329
-  isDisabled: false
+  channel: CS8
 
-- name: ND6
+- name: ND10
   type: CS
-  channel: CS6
-  serviceId: 340
-  isDisabled: false
-
-- name: ND6
-  type: CS
-  channel: CS6
-  serviceId: 341
-  isDisabled: false
-
-- name: ND6
-  type: CS
-  channel: CS6
-  serviceId: 354
-  isDisabled: false
-
-- name: ND6
-  type: CS
-  channel: CS6
-  serviceId: 294
-  isDisabled: false
+  channel: CS10
 
 - name: ND12
   type: CS
   channel: CS12
-  serviceId: 254
-  isDisabled: false
 
-- name: ND12
+- name: ND14
   type: CS
-  channel: CS12
-  serviceId: 325
-  isDisabled: false
-
-- name: ND12
-  type: CS
-  channel: CS12
-  serviceId: 330
-  isDisabled: false
+  channel: CS14
 
 - name: ND16
   type: CS
   channel: CS16
-  serviceId: 290
-  isDisabled: false
 
-- name: ND16
+- name: ND18
   type: CS
-  channel: CS16
-  serviceId: 305
-  isDisabled: false
-
-- name: ND16
-  type: CS
-  channel: CS16
-  serviceId: 311
-  isDisabled: false
-
-- name: ND16
-  type: CS
-  channel: CS16
-  serviceId: 333
-  isDisabled: false
-
-- name: ND16
-  type: CS
-  channel: CS16
-  serviceId: 343
-  isDisabled: false
-
-- name: ND16
-  type: CS
-  channel: CS16
-  serviceId: 353
-  isDisabled: false
+  channel: CS18
 
 - name: ND20
   type: CS
   channel: CS20
-  serviceId: 307
-  isDisabled: false
 
-- name: ND20
+- name: ND22
   type: CS
-  channel: CS20
-  serviceId: 308
-  isDisabled: false
+  channel: CS22
 
-- name: ND20
+- name: ND24
   type: CS
-  channel: CS20
-  serviceId: 309
-  isDisabled: false
+  channel: CS24
