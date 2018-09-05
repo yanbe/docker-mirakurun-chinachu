@@ -65,21 +65,14 @@ docker-compose up -d
 docker-compose down
 ```
 
-### デーモン化(SysV Init)
-```shell
-cp docker-mirakurun-chinachu /etc/init.d
-## 永続化(次回OS起動時に自動で起動)
-chkconfig --add docker-mirakurun-chinachu
+### デーモン化
 
-# 手動起動
-service docker-mirakurun-chinachu start
+`docker-compose.yml` に `restart: always` と記載をしているため、一度docker-compose up -d すると
+とくにに何もしなくても、マシン再起動後も自動的にdockerデーモンによって各コンテナが起動されるようになっています。
 
-# 動作確認
-service docker-mirakurun-chinachu status
+この挙動が不要である場合は `restart: no` と書き換えてご利用ください。
 
-# 手動停止
-service docker-mirakurun-chinachu stop
-```
+ref: http://docs.docker.jp/engine/reference/run.html#restart-policies-restart
 
 ## 設定
 エリア、環境によって変更が必要なファイルは下記の通りとなります
